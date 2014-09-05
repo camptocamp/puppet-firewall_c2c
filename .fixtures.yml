@@ -1,0 +1,6 @@
+---
+fixtures:
+  repositories:
+    firewall: https://github.com/puppetlabs/puppetlabs-firewall.git
+  symlinks:
+    firewall_c2c: "#{source_dir}"
