@@ -1,6 +1,8 @@
 Firewall_c2c
 ============
 
+[![Build Status](https://travis-ci.org/camptocamp/puppet-firewall_c2c.png?branch=master)](https://travis-ci.org/camptocamp/puppet-firewall_c2c)
+
 Overview
 --------
 
