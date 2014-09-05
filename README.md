@@ -12,6 +12,7 @@ Example:
 Consider this manifest:
 
 ```puppet
+class { 'firewall': }
 firewall { '000 accept all icmp':
   proto   => 'icmp',
   action  => 'accept',
@@ -40,6 +41,19 @@ With this module, no need to define explicit dependencies:
 Notice: /Stage[main]/Main/Firewall[000 accept all icmp]/ensure: current_value absent, should be present (noop)
 Notice: /Stage[main]/Main/Firewall[001 accept all to lo interface]/ensure: current_value absent, should be present (noop)
 Notice: /Stage[main]/Main/Firewall[002 accept related established rules]/ensure: current_value absent, should be present (noop)
+```
+
+And with `--debug`:
+```
+Debug: /Firewall[000 accept all icmp]: Autorequiring Package[iptables]
+Debug: /Firewall[000 accept all icmp]: Autorequiring Package[iptables-persistent]
+Debug: /Firewall[001 accept all to lo interface]: Autorequiring Package[iptables]
+Debug: /Firewall[001 accept all to lo interface]: Autorequiring Package[iptables-persistent]
+Debug: /Firewall[001 accept all to lo interface]: Autorequiring Firewall[000 accept all icmp]
+Debug: /Firewall[002 accept related established rules]: Autorequiring Package[iptables]
+Debug: /Firewall[002 accept related established rules]: Autorequiring Package[iptables-persistent]
+Debug: /Firewall[002 accept related established rules]: Autorequiring Firewall[001 accept all to lo interface]
+
 ```
 
 This greatly ease the usage of Puppetlabs' firewall module.
