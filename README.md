@@ -1,6 +1,7 @@
 Firewall_c2c
 ============
 
+[![Puppet Forge](http://img.shields.io/puppetforge/v/camptocamp/firewall_c2c.svg)](https://forge.puppetlabs.com/camptocamp/firewall_c2c)
 [![Build Status](https://travis-ci.org/camptocamp/puppet-firewall_c2c.png?branch=master)](https://travis-ci.org/camptocamp/puppet-firewall_c2c)
 
 Overview
