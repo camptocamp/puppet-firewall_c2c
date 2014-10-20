@@ -1,3 +1,8 @@
+## 2014-10-20 Release 1.1.0
+###Summary
+Linting
+Setup automatic Forge releases
+
 ## 2014-09-05 Release 1.0.1
 ###Summary
 Update documentation
