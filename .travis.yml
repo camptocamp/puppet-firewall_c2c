@@ -1,11 +1,7 @@
 ---
 language: ruby
 bundler_args: --without development
-script: "bundle exec rake validate && bundle exec rake lint && bundle exec rake spec SPEC_OPTS='--format documentation'"
-after_success:
-  ["git clone -q git://github.com/puppetlabs/ghpublisher.git .forge-releng", ".forge-releng/publish"]
-env:
-  forge_password: "MPHNBZSqsZw/qxBe9fqCC4ZUHc4ty0AKOLx1n+u81ayHmw6bGSs1lXzuYiQMTGXMg0uKRCF81/5nt87gh9Rcz6kIc+tPG8vhuQrZ19f29a05ougoD9RWOn091GhR2bSrGygETZ5V95CzZ1abcl4rSK8E9tJ6L4V6biVrGWJ1jWE="
+script: "bundle exec rake validate && bundle exec rake lint && bundle exec rake spec SPEC_OPTS='--format documentation' && bundle exec rake metadata"
 matrix:
   fast_finish: true
   include:
@@ -17,3 +13,14 @@ matrix:
     env: PUPPET_GEM_VERSION="~> 3.0"
 notifications:
   email: false
+deploy:
+  provider: puppetforge
+  user: camptocamp
+  password:
+    secure: "kVOc5Stl9l4hlRzYQMfHYwb3rELhIgx9vIUIkNB+thSRDyDKfX8GGiiBvcp40hGBhNiYWEjxiMqx07SbXYlJVsvN4PxMW4hF7uxYXBQc2dk+GCu0jFjMbkGyzd4n1A7oUG3ndYv3zt7na6wokMx0FwQCe0TRYyQkeuUb6YKGVTI="
+  on:
+    tags: true
+    # all_branches is required to use tags
+    all_branches: true
+    # Only publish if our main Ruby target builds
+    rvm: 1.9.3
