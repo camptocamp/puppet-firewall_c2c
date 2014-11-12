@@ -5,9 +5,7 @@ script: "bundle exec rake validate && bundle exec rake lint && bundle exec rake 
 after_success:
   ["git clone -q git://github.com/puppetlabs/ghpublisher.git .forge-releng", ".forge-releng/publish"]
 env:
-  global:
-    - PUBLISHER_LOGIN=camptocamp
-    - secure: "Km/y1aJiSySBTkqntaTNfZDl0/FoQOVsYYuvslP2OsLEqMBjvN/dXUqhMgagnh2uDupmuyKzN/Dd6bLIqBDQDhD8+SOfeh8DCfVpjV47qDtoNmfEbA2zBq938tkBJ6cqo0mA6WfxMLppczU9bJqF1+doxlUKVzTCMRrzLyOvCLw="
+  forge_password: "MPHNBZSqsZw/qxBe9fqCC4ZUHc4ty0AKOLx1n+u81ayHmw6bGSs1lXzuYiQMTGXMg0uKRCF81/5nt87gh9Rcz6kIc+tPG8vhuQrZ19f29a05ougoD9RWOn091GhR2bSrGygETZ5V95CzZ1abcl4rSK8E9tJ6L4V6biVrGWJ1jWE="
 matrix:
   fast_finish: true
   include:
