@@ -1,3 +1,7 @@
+## 2014-11-17 Release 1.1.1
+###Summary
+Lint metadata.json
+
 ## 2014-10-20 Release 1.1.0
 ###Summary
 Linting
