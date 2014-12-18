@@ -1,3 +1,7 @@
+## 2014-12-18 - Release 1.1.1
+
+  Various improvements in unit tests
+
 ## 2014-11-17 Release 1.1.1
 ###Summary
 Lint metadata.json
