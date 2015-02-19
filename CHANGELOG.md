@@ -1,3 +1,7 @@
+## 2015-02-19 - Release 1.1.5
+
+- Various spec improvements
+
 ## 2015-01-06 - Release 1.1.4
 
 Fix .travis.yml
