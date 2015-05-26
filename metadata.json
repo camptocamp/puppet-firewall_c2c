@@ -1,6 +1,6 @@
 {
   "name": "camptocamp-firewall_c2c",
-  "version": "1.1.11",
+  "version": "1.1.12",
   "author": "Camptocamp",
   "summary": "Add autorequire to Puppet Labs' firewall module",
   "license": "Apache-2.0",
